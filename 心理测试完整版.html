@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>心理测试</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            width: 80%;
+            margin: 0 auto;
+			 font-size: 24px;
+        }
+        .question {
+            display: none;
+        }
+        .question.active {
+            display: block;
+        }
+		.button {
+  display: inline-block;
+  padding: 15px 25px;
+  font-size: 12px;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  outline: none;
+  color: #fff;
+  background-color: #4CAF50;
+  border: none;
+  border-radius: 15px;
+  box-shadow: 0 9px #999;
+}
+
+.button:hover {background-color: #3e8e41}
+
+.button:active {
+  background-color: #3e8e41;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}
+    </style>
+</head>
+<body>
+    <h1>心理测试</h1>
+    <div id="question-1" class="question active">
+        <p>问题1：你的性别？</p>
+        <button onclick="showQuestion(2)"class="button">男</button>
+        <button onclick="showQuestion(3)"class="button">女</button>
+    </div>
+    <div id="question-2" class="question">
+        <p>问题2：发生争执时你通常会？</p>
+        <button onclick="showQuestion(4)"class="button">争个你死我活</button>
+        <button onclick="showQuestion(5)"class="button">赶紧把火压住</button>
+    </div>
+    <div id="question-3" class="question">
+        <p>问题2：发生争执时你通常会？</p>
+        <button onclick="showQuestion(6)"class="button">争个你死我活</button>
+        <button onclick="showQuestion(7)"class="button">赶紧把火压住</button>
+    </div>
+	<div id="question-4" class="question">
+	   <p>问题3：如果对方攻击你另一半你会？</p>
+        <button onclick="showQuestion(8)"class="button">恼羞成怒破罐子破摔</button>
+        <button onclick="showQuestion(9)"class="button">主动妥协不让事情失控</button>
+       
+    </div>
+	<div id="question-5" class="question">
+		<p>问题3：如果对方不打算和解你会？</p>
+        <button onclick="showQuestion(10)"class="button">和平劝解</button>
+        <button onclick="showQuestion(11)"class="button">正面对着干</button>
+       
+	</div>
+	<div id="question-6" class="question">
+	   <p>问题3：如果对方攻击你另一半你会？</p>
+        <button onclick="showQuestion(12)"class="button">恼羞成怒破罐子破摔</button>
+        <button onclick="showQuestion(13)"class="button">主动妥协不让事情失控</button>
+       
+    </div>
+	<div id="question-7" class="question">
+		<p>问题3：如果对方不打算和解你会？</p>
+        <button onclick="showQuestion(14)"class="button">和平劝解</button>
+        <button onclick="showQuestion(15)"class="button">正面对着干</button>
+	</div>
+	<!-- MALE-->
+	<div id="question-8" class="question">
+		<p>场面失控两败俱伤</p>  
+		<button onclick="showQuestion(1)"class="button">返回</button> 
+	</div>
+	<div id="question-9" class="question">
+		<p>问题4：如果对方不打算和解你会？</p>
+        <button onclick="showQuestion(10)"class="button">和平劝解</button>
+        <button onclick="showQuestion(11)"class="button">正面对着干</button>
+	</div>
+	<div id="question-10" class="question">
+		<p>场面基本控制</p>
+		<button onclick="showQuestion(1)"class="button">返回</button> 		
+	</div>
+	<div id="question-11" class="question">
+		<p>场面失控两败俱伤</p> 
+		<button onclick="showQuestion(1)"class="button">返回</button> 		
+	</div>
+	<!-- FEMALE-->
+	<div id="question-12" class="question">
+		<p>场面失控两败俱伤</p>  
+		<button onclick="showQuestion(1)"class="button">返回</button> 
+	</div>
+	<div id="question-13" class="question">
+		<p>问题4：如果对方不打算和解你会？</p>
+        <button onclick="showQuestion(14)"class="button">和平劝解</button>
+        <button onclick="showQuestion(15)"class="button">正面对着干</button>
+	</div>
+	<div id="question-14" class="question">
+		<p>场面基本控制</p> 
+		<button onclick="showQuestion(1)"class="button">返回</button> 		
+	</div>
+	<div id="question-15" class="question">
+		<p>场面失控两败俱伤</p>  
+		<button onclick="showQuestion(1)"class="button">返回</button> 
+	</div>
+    
+
+    <script>
+        function showQuestion(questionId) {
+            const activeQuestion = document.querySelector('.question.active');
+            if (activeQuestion) {
+                activeQuestion.classList.remove('active');
+            }
+            const nextQuestion = document.getElementById(`question-${questionId}`);
+            if (nextQuestion) {
+                nextQuestion.classList.add('active');
+            }
+        }
+    </script>
+</body>
+</html>
